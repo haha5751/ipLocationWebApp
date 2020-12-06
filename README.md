@@ -1,2 +1,2 @@
 # 3308final
-Final for CSCI 3308
+Practice for CSCI 3308 Final
