@@ -1,20 +1,11 @@
-html, body {
-    height: 100%;
-  }
-
   body {
     background-color: #F8FFF8;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-  
-    display: flex;
-    flex-direction: column;
-  
-    overflow-x: hidden;
+    font-size: 16px;
+    color: black;
   }
-  
-  #footer {
-    flex-shrink: 0;
-  }
+
+
   
   nav {
     background-color: #424B54;
@@ -23,3 +14,5 @@ html, body {
   .content {
     background-color: #EBEDE9;
   }
+  
+  

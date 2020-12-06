@@ -10,6 +10,7 @@
     "author": "Harris Hafeez",
     "license": "ISC",
     "dependencies": {
+        "asnyc": "0.0.1-security",
         "ejs": "^3.1.5",
         "express": "^4.17.1",
         "mongodb": "^3.6.3"
