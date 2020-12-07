@@ -1,10 +1,19 @@
 <header>
     <%- include('partials/header'); %>
 </header>
-
+<script>
+    function testFunction() {
+        console.log("did", );
+    }
+</script>
 <section>
     <div class="container">
         <p>This is getLocation</p>
+        <button type="button" onclick="testFunction()" class="btn btn-outline-dark">Test</button>
+        <% data.forEach((data) =>  {%>
+        <h1><%= data.ip_start %></h1>
+        <% }); %>
+        <h2><%= title %></h2>
     </div>
 </section>
 
