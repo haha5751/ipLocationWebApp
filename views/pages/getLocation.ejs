@@ -20,7 +20,7 @@
                 <% if (result != "0" && result != "error") { %>
                 <div style="margin-top: -15px;">
                     <div class="map-class m-3">
-                        <iframe id="getLocation-map-src" src='https://maps.google.com/maps?q=<%=result.country_name%>z&k=&output=embed' frameborder="0"></iframe>
+                        <iframe id="getLocation-map-src" src='https://maps.google.com/maps?q=<%=result.country_name%>&output=embed' frameborder="0"></iframe>
                     </div>
                 </div>    
                 <% } else if(result == "0") { %>
