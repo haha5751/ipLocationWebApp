@@ -1,7 +1,7 @@
 {
-    "name": "3308final",
+    "name": "ipLocationWebApp",
     "version": "1.0.0",
-    "description": "3308final",
+    "description": "ipLocationWebApp",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
