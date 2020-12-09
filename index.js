@@ -8,6 +8,7 @@ IPLocations = require("./models/IPModels");
 mongoose.connect(dbUrl, {
     'useNewUrlParser': true
 });
+
 // connect to db
 mongoose.set('useUnifiedTopology', true);
 
@@ -32,8 +33,7 @@ app.use(express.static("public"));
 // ejs
 app.set('view engine', 'ejs');
 
-// app get requests
-
+// app get requests:
 // home
 app.get("/", (req, res) => {
     res.render('pages/home', {
