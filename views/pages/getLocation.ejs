@@ -1,21 +1,46 @@
 <header>
     <%- include('partials/header'); %>
 </header>
-<script>
-    function testFunction() {
-        console.log("did", );
-    }
-</script>
-<section>
-    <div class="container">
-        <p>This is getLocation</p>
-        <button type="button" onclick="testFunction()" class="btn btn-outline-dark">Test</button>
-        <% data.forEach((data) =>  {%>
-        <h1><%= data.ip_start %></h1>
-        <% }); %>
-        <h2><%= title  %></h2>
-    </div>
-</section>
+</br>
+
+<body>
+    <section>
+        <div class="container div-special" id="getLocation-main" style="height: 870px; width: 1150px; padding-top: 20px;">
+            <div id="getLocation-search" style="padding-bottom: 50px; padding-top: 15px;">
+                <h1 style="padding-left: 55px; padding-bottom: 5px; font-size: 30px;">Enter an IP address in the text box below to see the country of origin</h1>
+                <form class="form-inline" style="padding-left: 40px; padding-top: 22px; margin-bottom: -3px;" action="/getLocation/submit" method="GET">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="getLocation-ip-address" class="sr-only">IP Address</label>
+                        <input type="text" class="form-control" name="getLocation_ip_address"id="getLocation-ip-address" placeholder="IP Address">
+                    </div>
+                    <button type="submit" class="btn btn-secondary mb-2">Submit</button>
+                </form>
+            </div>
+            <div id="getLocation-map">
+                <% if (result != "0" && result != "error") { %>
+                <div style="margin-top: -15px;">
+                    <div class="map-class m-3">
+                        <iframe id="getLocation-map-src" src='https://maps.google.com/maps?q=<%=result.country_name%>z&k=&output=embed' frameborder="0"></iframe>
+                    </div>
+                </div>    
+                <% } else if(result == "0") { %>
+                    <p></p> 
+                <% } else { %>
+                    <div style="padding-left: 40px;">
+                        <div class="err-msg-outline" style="width: 45%;">
+                            <p style="padding-left: 16px;">Invalid IP address! Make sure the IP is:</p>
+                            <ul style="margin-top: -9px;">
+                                <li class="list-group-special">In IPV4 form, i.e. X.X.X.X</li>
+                                <li class="list-group-special">Where each 'X' is a number in the range of (0 - 255)</li>
+                                <li class="list-group-special">And an 'X' should not be prefixed with '0' unless 'X' itself is '0'</li>
+                              </ul>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+</body>
 
 <footer>
     <%- include('partials/footer'); %>

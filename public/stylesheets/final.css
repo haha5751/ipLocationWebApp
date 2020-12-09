@@ -1,18 +1,120 @@
+/* all content */
   body {
-    background-color: #F8FFF8;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    font-size: 16px;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #F1E4E8;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 23px;
+    letter-spacing: -0.4px;
+    word-spacing: 0px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
     color: black;
   }
 
+/* special div   */
+  .div-special {
+    background-color: #FAF5F6;
+  }  
 
-  
+/* nav bar */
   nav {
-    background-color: #424B54;
+    background-color: #2D2D34;
+    font-size: 17px;
   }
 
-  .content {
-    background-color: #EBEDE9;
+  /* home grid */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px 202px 198px 200px 200px;
+    grid-template-rows: 122px 280px 202px 177px 227px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "p-tag p-tag . . . ."
+      ". div-1 div-2 div-3 div-4 ."
+      ". div-1 div-2 div-3 div-4 ."
+      ". div-5 div-5 div-5 div-5 ."
+      ". . . . . .";
+  }
+  .div-1 {
+    grid-area: div-1;
+  }
+  .div-2 {
+    grid-area: div-2;
+  }
+  .div-3 {
+    grid-area: div-3;
+  }
+  .div-4 {
+    grid-area: div-4;
+  }
+  .div-5 {
+    grid-area: div-5;
+  }
+  .p-tag {
+   grid-area: p-tag;
+   padding-top: 65px;
+   padding-left: 150px;
+   font-size: 30px;
+   font-style: italic;
   }
   
-  
+  /* home div outline */
+  .div-outline {
+    outline: 1px solid #2D2D34;
+    outline-offset: 0px;
+  }
+
+/* home horizontal rule */
+  .hr-stylized {
+    background-color: black;
+    color: black;
+  }
+
+  /* getLocation invalid ip outline */
+  .err-msg-outline {
+    outline: 4px solid #DC143C;
+    outline-offset: 0px;
+    }
+
+/* getLocation map */
+  .map-class {
+    overflow:hidden;
+    position:relative;
+    padding-bottom:50%;
+    height:0;
+    }
+  .map-class iframe {
+    position:absolute;  
+    height:100%;
+    width:96%;
+    padding-left: 43px;
+    left:0;
+    top:0;
+  }
+
+/* getLocation invalid ip */
+  .list-group-special {
+    font-size: 14px;
+    background-color: #FAF5F6;
+    padding-bottom: 3px;
+    margin-left: -24px;
+    list-style-position: inside;
+  }
+
+/* footer */
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: small;
+    font-weight: 10; 
+    line-height: 7px;
+  }  
